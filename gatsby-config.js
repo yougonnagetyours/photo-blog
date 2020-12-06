@@ -7,6 +7,14 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    'gatsby-plugin-sass'
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"),
+        ],
+      },
+    },
   ],
 }
